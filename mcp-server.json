@@ -1,0 +1,41 @@
+{
+  "name": "azure-devops-qa-agent",
+  "version": "1.0.0",
+  "displayName": "Azure DevOps QA Agent",
+  "description": "Agent-driven MCP server for Azure DevOps test automation — generates test cases and Gherkin regression scenarios without LLM API calls",
+  "author": "Gokulnath Kumar",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gocoollnath/ado-qa-mcp-agent"
+  },
+  "homepage": "https://github.com/Gocoollnath/ado-qa-mcp-agent",
+  "license": "MIT",
+  "keywords": ["azure-devops", "test-automation", "gherkin", "bdd", "mcp", "qa", "testing"],
+  "tools": [
+    {
+      "name": "fetch_work_item_for_test_generation",
+      "description": "Fetches Azure DevOps work item data to generate test cases (Step 1 of 2)"
+    },
+    {
+      "name": "create_and_link_test_cases",
+      "description": "Creates test cases in Azure DevOps and links them to work items (Step 2 of 2)"
+    },
+    {
+      "name": "fetch_feature_for_gherkin_generation",
+      "description": "Fetches feature hierarchy and existing test coverage for Gherkin generation (Step 1 of 2)"
+    },
+    {
+      "name": "attach_gherkin_regression_to_feature",
+      "description": "Attaches generated Gherkin feature file to Azure DevOps Feature work item (Step 2 of 2)"
+    }
+  ],
+  "configuration": {
+    "required": ["AZURE_DEVOPS_PAT"],
+    "optional": ["PYTHONPATH"],
+    "documentation": "https://github.com/Gocoollnath/ado-qa-mcp-agent#configuration"
+  },
+  "environment": {
+    "python": ">=3.10,<3.14",
+    "entrypoint": "python -m ado_qa_mcp.server"
+  }
+}

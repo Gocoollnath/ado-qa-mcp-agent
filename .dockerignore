@@ -1,0 +1,82 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+.venv
+venv/
+ENV/
+env/
+.virtualenv
+
+# IDE
+.vscode
+.idea
+.vscode-server
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# Testing
+.pytest_cache
+.coverage
+.tox
+.mypy_cache
+.dmypy.json
+dmypy.json
+htmlcov/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Documentation (don't need in container)
+docs/
+*.md
+README*
+CHANGELOG*
+CONTRIBUTING*
+LICENSE
+
+# Task files
+tasks/
+
+# CI/CD
+.github
+.gitlab-ci.yml
+.circleci
+
+# Other
+node_modules
+npm-debug.log

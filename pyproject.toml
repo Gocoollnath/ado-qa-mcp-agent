@@ -1,0 +1,38 @@
+[project]
+name = "ado-qa-mcp-agent"
+version = "1.0.0"
+description = "Agent-driven MCP server for Azure DevOps test automation — generates test cases and Gherkin regression scenarios without LLM API calls"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10,<3.14"
+keywords = [
+    "azure-devops",
+    "test-automation",
+    "gherkin",
+    "bdd",
+    "mcp",
+    "qa",
+    "testing",
+    "model-context-protocol"
+]
+dependencies = [
+    "mcp>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Gocoollnath/ado-qa-mcp-agent"
+Documentation = "https://github.com/Gocoollnath/ado-qa-mcp-agent#readme"
+Repository = "https://github.com/Gocoollnath/ado-qa-mcp-agent"
+Issues = "https://github.com/Gocoollnath/ado-qa-mcp-agent/issues"
+
+[project.scripts]
+azure-devops-qa-mcp = "ado_qa_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ado_qa_mcp"]

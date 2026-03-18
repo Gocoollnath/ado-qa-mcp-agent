@@ -1,0 +1,39 @@
+# GitHub CODEOWNERS
+# Define who is responsible for reviewing and maintaining different parts of the codebase
+# Reference: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo (required for all PRs)
+* @Gocoollnath
+
+# Python source code
+/src/ @Gocoollnath
+
+# Azure DevOps integration tools
+/src/ado_qa_mcp/tools/ @Gocoollnath
+
+# Tests
+/tests/ @Gocoollnath
+
+# Configuration and dependency files
+/pyproject.toml @Gocoollnath
+/Dockerfile @Gocoollnath
+/docker-compose.yml @Gocoollnath
+/.github/ @Gocoollnath
+
+# Documentation
+/docs/ @Gocoollnath
+/README.md @Gocoollnath
+/CONTRIBUTING.md @Gocoollnath
+/SECURITY.md @Gocoollnath
+
+# Installation scripts
+/scripts/ @Gocoollnath
+
+# Rules:
+# - Any PR that touches a file listed here requires review from the specified owner
+# - For pull requests to main or release branches, code owner review is mandatory
+# - Owners are github usernames without @ prefix (@ is added by GitHub)
+#
+# To add additional owners, use the format:
+# /path/to/files @owner1 @owner2
+
